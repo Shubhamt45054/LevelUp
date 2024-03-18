@@ -1,0 +1,166 @@
+@use "_colors" as color;
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.navbar{
+ 
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-radius: 10px;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+ .logo{
+    padding-left: 15px;
+    color: white;
+}
+.navbar > h1>Link>button> span{
+  color: color.$orange;
+}
+Link{
+    display: flex;
+    border: 2px solid red;
+    //justify-content: space-between;
+    
+}
+.navbar>ul>li{
+    list-style: none;
+    //border: 2px solid red;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 15px;
+    padding: 10px 15px;
+    transition: 0.2s ;
+    box-shadow:inset 2px 2px 5px gray;
+    border-radius: 10px;
+    background-color: white;
+}
+.navbar > ul > li > a{
+  text-decoration: none;
+  color: color.$orange;
+  
+}
+.navbar>ul>li>a:hover{
+    color: red;
+    cursor: pointer;
+}
+.navbar > button{
+    height: 48px;
+    width: 120px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 200px;
+    padding: 5px 10px;
+    background-color: #fdc50f;
+    box-shadow: 2px 2px 8px 0px color.$orange;
+    transition: 0.1s;
+}
+.navbar > button:hover{
+    background-color: white;
+    transform: scale(0.95);
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 0px white;
+}
+.icon{
+    width: 40px;
+    height: 50px;
+    display: none;
+}
+.log{
+    // border: 2px solid red;
+ height: 40%;
+ width: 200px;
+ display: flex;
+ justify-content: space-around;
+ padding: 10px 0px;
+ }
+ .login,.signup{
+  
+    height:100%;
+    padding: 1px 1px;
+    text-align: center;
+    border: transparent;
+     border-radius: 7px;
+     color: white;
+    //  background-image: linear-gradient(yellow,orange);;
+     font: 500 17px normal;
+ }
+.check{
+  display: none;
+}
+@media screen and (max-width: 900px) {
+    .navbar {
+      width: 100%;
+    }
+  
+    .navbar ul {
+      z-index: 100;
+      position: absolute;
+      top: 80px;
+      right: 0px;
+      margin-right: 1rem;
+      border: 2px solid black;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 40%;
+      backdrop-filter: blur(2px);
+      padding: 10px 0px;
+      display: none;
+      transition: all 0.5s;
+      //transform: translateX(100%);
+    }
+    .navbar > ul > li > a{
+      text-decoration: none;
+      color: black;
+      
+    }
+    .navbar ul li {
+      border: 2px solid green;
+      margin: 0px;
+      width: 50%;
+      font-size: 0.8rem;
+      text-align: center;
+      
+      background-image: linear-gradient(yellow, orange);
+      border-radius: 20px;
+    }
+  
+    .navbar .icon {
+      display: block;
+      margin-right: 40px;
+    }
+  
+    .navbar .icon:hover .check {
+      border: 2px solid red;
+    }
+  
+    .navbar .check {
+      border: 2px solid red;
+      margin-right: 40px;
+    }
+  
+     input.check:checked ~ ul {
+      display: flex;
+      
+    }
+  
+    .navbar * {
+      padding: 0px;
+    }
+  
+
+  
+    .navbar nav {
+      border: 2px solid green;
+      height: 100px;
+      width: 100px;
+    }
+  }

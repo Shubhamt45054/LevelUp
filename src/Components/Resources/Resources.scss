@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+ 
+body {
+  font-family: 'Raleway',Sans-serif;
+  color:darkblue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+//Flex container
+.container {
+  display: flex;
+  -webkit-display: box;
+  -moz-display: box;
+  -ms-display: flexbox;
+  -webkit-display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+// Cards
+.cards {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3%;
+  }
+
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #eed3ef;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 20px 40px -14px rgba(36, 34, 34, 0.25);
+    overflow: hidden;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      .card-image {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Content
+  .card-info {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 1.5em;
+  }
+
+  .card-title {
+    font-size: 25px;
+    line-height: 1.1em;
+    color: #32325d;
+    margin-bottom: 0.2em;
+  }
+
+  // Images
+  .card-image{
+    height: 200px;
+    overflow: hidden;
+     
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px 6px 0px 0px;
+    opacity: 0.91;
+  }
+}
+.image1{
+    background-image: url(" http://www.techsors.com/wp-content/uploads/2016/02/Javascript.jpg");
+}
+.image2{
+    background-image: url("https://theomnibuzz.com/wp-content/uploads/2020/12/react-js-1_orig.png");
+}
+.image3{
+    background-image: url(" https://tse4.mm.bing.net/th?id=OIP.u7HNT4EVeGwoM5jXxnmNmgHaEK&pid=Api&P=0&h=180");
+}
+.image4{
+    background-image: url(" https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191113185616/Best-Way-To-Start-With-Competitive-Programming-GeeksforGeeks-CP-Live-Course.png");
+}
+.image5{
+    background-image: url(" https://www.cxoinsightme.com/wp-content/uploads/2020/07/AI_shutterstock_1722492775-scaled.jpg");
+}
+.image6{
+    background-image: url(" https://www.sphinx-solution.com/blog/wp-content/uploads/2016/08/machine-learning.jpg");
+}
+.image7{
+    background-image: url("https://www.mtdtraining.com/wp-content/uploads/2018/06/Businessman-with-management-gears.jpg");
+}
+.image8{
+    background-image: url("https://www.oneeducation.org.uk/wp-content/uploads/2021/06/Communication-Skills-Course.jpg");
+}
+.image9{
+    background-image: url("http://cdn.gulosolutions.com/wp-content/uploads/2014/08/UX-infographic.jpg");
+}
